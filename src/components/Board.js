@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import Square from './Square';
 
+
+
 export default class Board extends Component {
-    renderSquare(i){
+    renderSquare(i) {
         return <Square value={this.props.squares[i]}
-        onClick={()=>this.props.onClick(i)} />
+            onClick={() => this.props.onClick(i)} />
     }
     render() {
         return (
             <div>
+                <div>
+                </div>
                 <div className="border-row">
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
@@ -24,7 +28,7 @@ export default class Board extends Component {
                     {this.renderSquare(7)}
                     {this.renderSquare(8)}
                 </div>
-            </div>
+            </div >
         );
     }
 }
